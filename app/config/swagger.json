@@ -1,0 +1,47 @@
+{
+    "swagger":"2.0",
+    "info": {
+        "title": "Sample API",
+        "description":"API Documentation for developers",
+        "version": "1.0.1",
+        "contact":{
+          "name":"Julio Nuñez Quesada",
+          "url": "http://juhunuque.github.io/",
+          "email":"juhunuque@gmail.com"
+        }
+    },
+    "host":"http://localhost",
+    "basePath": "/v1",
+    "apiPath": "/api",
+    "apiFiles": ["./routes/index.js"],
+    "consumes":"application/json",
+    "produces":"application/json",
+    "tags":[
+      {
+        "name": "index",
+        "description": "Everything related with the sample"
+      }
+    ],
+    "definitions":{
+      "Pet":{
+        "type":"object",
+        "required":[
+          "name",
+          "photoUrls"
+        ],
+        "properties":{
+          "id":{
+            "type":"integer",
+            "format":"int64"
+          },
+          "name":{
+            "type":"string",
+            "example":"doggie"
+          }
+        },
+        "xml":{
+          "name":"Pet"
+        }
+      }
+    }
+}
